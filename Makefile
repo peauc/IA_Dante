@@ -9,9 +9,10 @@
 ##
 
 
-SRC	=	src/main.c \
+SRC	=	main.c 																\
+						init_lab.c													\
 
-OBJ	=	$(SRC:.c=.o)
+OBJ	=	$(addprefix src/, $(SRC:.c=.o))
 
 NAME	= 	dante
 
@@ -29,7 +30,7 @@ CFLAGS =  -W -Wall -Wextra -Werror
 $(NAME): 	$(OBJ)
 		@ tput setaf 2
 		@ echo "[OK] > Linking"
-		@ gcc $(OBJ) -o $(NAME) -lncurses
+		@ gcc $(OBJ) -o $(NAME)
 		@ echo -e "\033[1;32m \t \t \t ♩♪♫ DANTE\033[0;32m®\033[1;32m Compiled Sucesfully ♩♪♫\033[0m "
 
 all:		$(NAME)
