@@ -15,10 +15,17 @@ OBJ	=	$(SRC:.c=.o)
 
 NAME	= 	dante
 
+
+ifeq (($(POC)), yes)
 CC	= 	@ clang -F4 -g -I./inc
-
-eCFLAGS	= 	-W  -Wall -Wextra -Werror
-
+else
+CC =  @ gcc -F4 -g -I./inc
+endif
+ifeq (($(DEBUG), yes)
+CFLAGS	= 	-W -Wall -Wextra -g -D DEBUG
+else
+CFLAGS =  -W -Wall -Wextra -Werror 
+`
 $(NAME): 	$(OBJ)
 		@ tput setaf 2
 		@ echo "[OK] > Linking"
