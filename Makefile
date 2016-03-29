@@ -5,13 +5,14 @@
 ## Login   <peau_c@epitech.net>
 ##
 ## Started on  Mon Jan 18 14:44:16 2016 Clement Peau
-## Last update Tue Mar 29 23:11:45 2016 Paul THEIS
+## Last update Tue Mar 29 23:25:45 2016 THEIS Paul
 ##
 
 
-SRC	=	src/main.c \
+SRC	=	main.c \
+			str.c
 
-OBJ	=	$(SRC:.c=.o)
+OBJ	=	$(addprefix src/, $(SRC:.c=.o))
 
 NAME	= 	dante
 
