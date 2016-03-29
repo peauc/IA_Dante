@@ -5,7 +5,7 @@
 ** Login   <peau_c@epitech.net>
 **
 ** Started on  Tue Mar 29 22:16:28 2016 Poc
-** Last update Tue Mar 29 22:38:54 2016 Poc
+** Last update Tue Mar 29 22:55:42 2016 Poc
 */
 
 #ifndef _DANTE_
@@ -15,7 +15,7 @@ typedef struct	s_maze
 {
   char	*maze;
   int	width;
-  int	lenght;
+  int	length;
 }		t_maze;
 
 typedef enum	s_state
