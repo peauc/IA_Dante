@@ -8,11 +8,12 @@
 ** Last update Tue Mar 29 23:24:58 2016 THEIS Paul
 */
 
-#include "main.h"
+#include "dante.h"
 
 /*
 ** Compte le nombre de caractere d'une string
 ** Return: i, le nombre de caractere d'une string
+** /!\ Ne compte pas le Nullbyte
 */
 
 int     my_strlen(char *str)
