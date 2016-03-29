@@ -5,7 +5,7 @@
 ## Login   <peau_c@epitech.net>
 ##
 ## Started on  Mon Jan 18 14:44:16 2016 Clement Peau
-## Last update Wed Mar 16 14:05:02 2016 Clement Peau
+## Last update Tue Mar 29 23:11:45 2016 Paul THEIS
 ##
 
 
@@ -15,14 +15,14 @@ OBJ	=	$(SRC:.c=.o)
 
 NAME	= 	dante
 
-CC	= 	@ clang -F4 -g -I./inc
+CC	= 	@gcc -O1 -g -I./inc
 
-eCFLAGS	= 	-W  -Wall -Wextra -Werror
+CFLAGS	= 	-W  -Wall -Wextra -Werror
 
 $(NAME): 	$(OBJ)
 		@ tput setaf 2
 		@ echo "[OK] > Linking"
-		@ gcc $(OBJ) -o $(NAME) -lncurses
+		@ gcc $(OBJ) -o $(NAME)
 		@ echo -e "\033[1;32m \t \t \t ♩♪♫ DANTE\033[0;32m®\033[1;32m Compiled Sucesfully ♩♪♫\033[0m "
 
 all:		$(NAME)
