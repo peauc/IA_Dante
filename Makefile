@@ -16,7 +16,6 @@ OBJ	=	$(addprefix src/, $(SRC:.c=.o))
 
 NAME	= 	dante
 
-
 ifeq (($(POC)), yes)
 CC	= 	@ clang -F4 -g -I./inc
 else
